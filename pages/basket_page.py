@@ -8,5 +8,6 @@ class BasketPage(BasePage):
             "Empty basket message is not presented"
 
     def should_be_empty_basket_form(self):
-        assert self.is_not_element_present(*BasketPageLocators.BASKET_PRODUCT_FORM), \
-            "Basket form is presented"
+        assert self.is_not_element_present(
+            *BasketPageLocators.BASKET_PRODUCT_FORM
+        ), "Basket form is presented"

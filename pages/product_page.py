@@ -28,8 +28,9 @@ class ProductPage(BasePage):
         assert product_name == product_name_in_cart, "Names are not equal"
 
     def should_not_be_success_message(self):
-        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE),\
-            "Success message is presented"
+        assert self.is_not_element_present(
+            *ProductPageLocators.SUCCESS_MESSAGE
+        ), "Success message is presented"
 
     def success_message_should_be_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE),\
